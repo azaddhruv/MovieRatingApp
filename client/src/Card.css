@@ -1,0 +1,74 @@
+.card {
+  width: 24%;
+  margin: 2rem 1rem;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  position: relative;
+  box-shadow: 1px 1px 1px rebeccapurple;
+}
+
+.card__img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card__content {
+  width: 80%;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s 0.1s ease-out;
+}
+
+.card__title {
+  color: #f5f5f5;
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+}
+
+.card__rating {
+  color: #f5f5f5;
+  width: 70px;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.7rem;
+  border-radius: 45px;
+  background-color: #0a3ad9;
+}
+
+.card__cover__left,
+.card__cover__right {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 555;
+  background-color: rgb(231, 25, 35, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__cover__left {
+  transform: translateY(-100%);
+}
+
+.card__cover__right {
+  left: 50%;
+  transform: translateY(100%);
+}
+
+.card:hover .card__cover__left {
+  transform: translateY(0);
+}
+
+.card:hover .card__cover__right {
+  transform: translateY(0);
+}
+
+.card:hover .card__content {
+  opacity: 100;
+}
